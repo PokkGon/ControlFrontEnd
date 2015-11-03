@@ -420,7 +420,7 @@
 				document.getElementById("nombre").value = response.name;
 				document.getElementById("mail").value = response.email;
                 $('#myModal3').modal('show');
-				setTimeout(function(){$("#myModal3").modal('hide');}, 3000);
+				setTimeout(function(){$('#myModal3').modal('hide');}, 3000);
             });
         } else if(response.status == 'not_authorized') {
             alert('Debes autorizar la app!');
