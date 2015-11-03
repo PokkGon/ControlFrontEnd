@@ -59,18 +59,18 @@
 			</div>
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav nav-pills nav-justified titulo">
-					<li role="presentation" class="active"><a href="#inicio" aria-controls="inicio" role="tab" data-toggle="tab">INICIO</a></li>
-					<li role="presentation"><a href="#nosotros" aria-controls="productos" role="tab" data-toggle="tab">NOSOTROS</a></li>
-					<li role="presentation"><a href="#productos" aria-controls="producto" role="tab" data-toggle="tab">SERVICIOS</a></li>
+					<li role="presentation" class="active"><a href="#inicio" aria-controls="inicio" role="tab" data-toggle="tab" class="scroll">INICIO</a></li>
+					<li role="presentation"><a href="#nosotros" aria-controls="productos" role="tab" data-toggle="tab" class="scroll">NOSOTROS</a></li>
+					<li role="presentation"><a href="#productos" aria-controls="producto" role="tab" data-toggle="tab" class="scroll">SERVICIOS</a></li>
 <!-- 					<li role="presentation"><a href="#clientes"  aria-controls="clientes" role="tab" data-toggle="tab">CLIENTES</a></li> -->
-					<li role="presentation"><a href="#contacto" aria-controls="contacto" role="tab" data-toggle="tab">CONTACTO</a></li>
+					<li role="presentation"><a href="#contacto" aria-controls="contacto" role="tab" data-toggle="tab" class="scroll">CONTACTO</a></li>
 				</ul>
 			</div>
 		</div>
 	  </div>
 	</div>
 	<div class="tab-content">
-	  <div role="tabpanel" class="tab-pane active" id="inicio">
+	  <div role="tabpanel" class="tab-pane active fade in" id="inicio">
 		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 			<!-- Indicators -->
 			<ol class="carousel-indicators">
@@ -84,21 +84,21 @@
 				<img src="http://www.fondosni.com/images/2012-11-22/Huevos%20azules-933347.jpg" alt="huevosazules">
 				<div class="carousel-caption">
 				<h3>Huevos Azules</h3>
-				<p>Deleite su paladar con una exquisitez afrodisiaca proveniente del sur de Chile.</p>
+				<p class="hidden-xs">Deleite su paladar con una exquisitez afrodisiaca proveniente del sur de Chile.</p>
 				</div>
 			  </div>
 			  <div class="item">
-				<img src="http://i.ytimg.com/vi/IPEgGRFV9SI/maxresdefault.jpg" alt="">
+				<img src="http://haciendacatalina.com/wp-content/uploads/2013/12/url2.jpg" alt="">
 				<div class="carousel-caption">
 				<h3>Gallina Mapuche</h3>
-				<p>El origen de una exquisitez especial ideal para el paladar de todos los chilenos.</p>
+				<p class="hidden-xs">El origen de una exquisitez especial ideal para el paladar de todos los chilenos.</p>
 				</div>
 			  </div>
 			  <div class="item">
-				<img src="http://i.ytimg.com/vi/FTrTuji7KGQ/maxresdefault.jpg" alt="">
+				<img src="http://www.canonistas.com/galerias/data/501/nido_de_mirlo_con_huevos.jpg" alt="">
 				<div class="carousel-caption">
 				<h3>Directo del sur de Chile</h3>
-				<p>Usando un método natural extraíamos los mejores huevos azules para su comida.</p>
+				<p class="hidden-xs">Usando un método natural extraíamos los mejores huevos azules para su comida.</p>
 				</div>
 			  </div>
 			</div>
@@ -141,7 +141,7 @@
 			</div>
 		</div>
 	  </div>
-	  <div role="tabpanel" class="tab-pane" id="nosotros" style="line-height:40px;">
+	  <div role="tabpanel" class="tab-pane fade" id="nosotros" style="line-height:40px;">
 		<div class="container">
 			<div class="page-header">
 				<h2 class="titulo">Nosotros</h2>
@@ -177,7 +177,7 @@
 			<div class="col-md-12">&nbsp;</div>
 		</div>
 	  </div>
-	  <div role="tabpanel" class="tab-pane" id="productos">
+	  <div role="tabpanel" class="tab-pane fade" id="productos">
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
@@ -251,13 +251,23 @@
 			</div>
 		</div>
 	  </div> -->
-	  <div role="tabpanel" class="tab-pane" id="contacto">
+	  <div role="tabpanel" class="tab-pane fade" id="contacto">
 		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
 		  <div class="modal-dialog">
 			<div class="modal-content">
 			  <div class="alert alert-success" style="margin-bottom:0">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 				<p>Su mensaje ha sido envíado.</p>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModal3Label">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="alert alert-success" style="margin-bottom:0">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<p>Su formulario ha sido rellenado con su información.</p>
 			  </div>
 			</div><!-- /.modal-content -->
 		  </div><!-- /.modal-dialog -->
@@ -366,7 +376,7 @@
 		  }
 		 }).done(function(response) {
 		   $('#myModal2').modal('show');
-		   setTimeout(function(){$("#myModal1").hide();}, 3000);
+		   setTimeout(function(){$("#myModal2").hide();}, 3000);
 		 });
 		e.preventDefault(); // avoid to execute the actual submit of the form.
 	});
@@ -405,11 +415,12 @@
     FB.getLoginStatus(function(response) {
         if(response.status == 'connected') {
             FB.api('/me', function(response) {
-                alert('Hola ' + response.name + '\nYa ha rellenado su formulario.');
 				var nombre = response.name;
 				var email = response.email;
 				document.getElementById("nombre").value = response.name;
 				document.getElementById("mail").value = response.email;
+                $('#myModal3').modal('show');
+				setTimeout(function(){$("#myModal3").hide();}, 3000);
             });
         } else if(response.status == 'not_authorized') {
             alert('Debes autorizar la app!');
@@ -419,6 +430,18 @@
     });
 	}
 	$.validate();
+	$('.nav a').click(function (e) {
+		e.preventDefault();
+		$(this).tab('show');
+	})
+	
+	$('a.scroll').on('click', function (e) {
+		var href = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(href).offset().top
+		}, 'slow');
+		e.preventDefault();
+    });
 	</script>
   </body>
 </html>
