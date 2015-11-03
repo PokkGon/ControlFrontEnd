@@ -8,11 +8,13 @@
 
     <!-- Bootstrap -->
     <link href="bower_components/bootstrap-css/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400,700' rel='stylesheet' type='text/css'>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap-css/js/bootstrap.min.js"></script>
+	<script src="bower_components/jquery-form-validator/form-validator/jquery.form-validator.min.js"></script>
 	<script>
 	(function(d,s,id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -30,47 +32,6 @@
     });
 	}
 	</script>
-	<style>
-	body{
-	background-color: #9DC1A1;
-	font-family: Calibri;
-	}
-	.titulo{
-	font-family: 'Quicksand', sans-serif;
-	font-weight: bold;
-	}
-	.nav-pills>li{
-	padding:7px 2px 7px 2px;
-	font-size:20px;
-	}
-	.nav-pills>li>a{
-	background-color:white;
-	}
-	.nav-pills>li.active>a{
-	background-color:#9DC1A1;
-	}
-	.carousel-caption{
-	background: rgba(0,0,0,0.7);
-	}
-	.parrafo{
-	font-size:22px;
-	}
-	#gmap iframe, #gmap object, #gmap embed { width: 100%; }
-	.container{
-	background:white;
-	}
-	.galeria ul {         
-        padding:0 0 0 0;
-        margin:0 0 0 0;
-    }
-    .galeria ul li {     
-        list-style:none;
-        margin-bottom:25px;           
-    }
-    .galeria ul li img {
-        cursor: pointer;
-    }
-	</style>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -80,237 +41,343 @@
     <![endif]-->
   </head>
   <body>
-    <div style="background-color:white;">
+	<div class="row-fluid" style="background-color:white;">
 		<div class="container">
-			<a href="index.html"><img src="img/logo.jpg"></a>
+				<a href="index.html"><img src="img/logo.jpg"></a>
 		</div>
 	</div>
-	<div style="background-color:#487F98;">
-		<div class="container" style="background-color:#487F98;padding:0;">
-			<ul class="nav nav-pills nav-justified titulo">
-				<li role="presentation" class="active"><a href="#inicio" aria-controls="inicio" role="tab" data-toggle="tab">INICIO</a></li>
-				<li role="presentation"><a href="#nosotros" aria-controls="productos" role="tab" data-toggle="tab">NOSOTROS</a></li>
-				<li role="presentation"><a href="#productos" aria-controls="producto" role="tab" data-toggle="tab">PRODUCTOS</a></li>
-				<li role="presentation"><a href="#clientes"  aria-controls="clientes" role="tab" data-toggle="tab">CLIENTES</a></li>
-				<li role="presentation"><a href="#contacto" aria-controls="contacto" role="tab" data-toggle="tab">CONTACTO</a></li>
-			</ul>
+	<div class="row-fluid" style="background-color:#487F98;">
+	  <nav class="navbar navbar-default">
+		<div class="container-fluid" style="background-color:#487F98;">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			  </button>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav nav-pills nav-justified titulo">
+					<li role="presentation" class="active"><a href="#inicio" aria-controls="inicio" role="tab" data-toggle="tab">INICIO</a></li>
+					<li role="presentation"><a href="#nosotros" aria-controls="productos" role="tab" data-toggle="tab">NOSOTROS</a></li>
+					<li role="presentation"><a href="#productos" aria-controls="producto" role="tab" data-toggle="tab">SERVICIOS</a></li>
+<!-- 					<li role="presentation"><a href="#clientes"  aria-controls="clientes" role="tab" data-toggle="tab">CLIENTES</a></li> -->
+					<li role="presentation"><a href="#contacto" aria-controls="contacto" role="tab" data-toggle="tab">CONTACTO</a></li>
+				</ul>
+			</div>
 		</div>
+	  </div>
 	</div>
-		 <div class="tab-content">
-			<div role="tabpanel" class="tab-pane active" id="inicio">
-			<div class="container">
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="padding:10px;">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-				</ol>
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-    				<div class="item active">
-      				<img src="http://www.fondosni.com/images/2012-11-22/Huevos%20azules-933347.jpg" alt="huevosazules">
-      				<div class="carousel-caption">
-					<h3>Huevos Azules</h3>
-					<p>Deleite su paladar con una exquisitez afrodisiaca proveniente del sur de Chile.</p>
-					</div>
-					</div>
-				<div class="item">
-    				<img src="http://i.ytimg.com/vi/IPEgGRFV9SI/maxresdefault.jpg" alt="">
-    				<div class="carousel-caption">
-					<h3>Gallina Mapuche</h3>
-					<p>El origen de una exquisitez especial ideal para el paladar de todos los chilenos.</p>
-    				</div>
-    			</div>
-				<div class="item">
-    				<img src="http://i.ytimg.com/vi/FTrTuji7KGQ/maxresdefault.jpg" alt="">
-    				<div class="carousel-caption">
-					<h3>Directo del sur de Chile</h3>
-					<p>Usando un método natural extraíamos los mejores huevos azules para su comida.</p>
-    				</div>
-    			</div>
-  				</div>
-				<!-- Controls -->
-				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-				    <span class="sr-only">Next</span>
-				</a>
+	<div class="tab-content">
+	  <div role="tabpanel" class="tab-pane active" id="inicio">
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+			  <div class="item active">
+				<img src="http://www.fondosni.com/images/2012-11-22/Huevos%20azules-933347.jpg" alt="huevosazules">
+				<div class="carousel-caption">
+				<h3>Huevos Azules</h3>
+				<p>Deleite su paladar con una exquisitez afrodisiaca proveniente del sur de Chile.</p>
+				</div>
+			  </div>
+			  <div class="item">
+				<img src="http://i.ytimg.com/vi/IPEgGRFV9SI/maxresdefault.jpg" alt="">
+				<div class="carousel-caption">
+				<h3>Gallina Mapuche</h3>
+				<p>El origen de una exquisitez especial ideal para el paladar de todos los chilenos.</p>
+				</div>
+			  </div>
+			  <div class="item">
+				<img src="http://i.ytimg.com/vi/FTrTuji7KGQ/maxresdefault.jpg" alt="">
+				<div class="carousel-caption">
+				<h3>Directo del sur de Chile</h3>
+				<p>Usando un método natural extraíamos los mejores huevos azules para su comida.</p>
+				</div>
+			  </div>
 			</div>
-			<div class="row" style="text-align:center;">
-        <div class="col-md-4">
-          <img class="img-circle" src="img/portadaproductos.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2><b>Productos</b></h2>
-          <p class="parrafo">Un fino producto para diversificar sus mejores platos y sus sabores de forma natural.</p>
-          <p class="parrafo"><a class="btn btn-default" data-toggle="tab" href="#productos" role="button">Ver detalles »</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-md-4">
-          <img class="img-circle" src="img/portadacontacto.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2><b>Contacto</b></h2>
-          <p class="parrafo">Póngase en contacto con nosotros y le despachamos el producto donde lo necesite.</p>
-          <p class="parrafo"><a class="btn btn-default" data-toggle="tab" href="#contacto" role="button">Ver detalles »</a></p>
-        </div>
-        <div class="col-md-4">
-          <img class="img-circle" src="img/portadaclientes.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
-          <h2><b>Clientes</b></h2>
-          <p class="parrafo">Sea parte de nuestra cartera de clientes que ya disfrutan nuestro producto.</p>
-          <p class="parrafo"><a class="btn btn-default" data-toggle="tab" href="#clientes" role="button">Ver detalles »</a></p>
-        </div>
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
 		</div>
+		<div class="container">
+			<div class="row" style="text-align:center;"><br>
+				<div class="col-md-4">
+				  <img class="img-circle" src="img/portadaproductos.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+				  <h2><b>Servicios</b></h2>
+				  <p class="parrafo">Ofrecemos un fino producto para diversificar sus mejores platos y sus sabores de forma natural.</p>
+				  <p class="parrafo"><a class="btn btn-default" data-toggle="tab" href="#productos" role="button">Productos »</a></p>
+				</div><!-- /.col-lg-4 -->
+				<div class="col-md-4">
+				  <img class="img-circle" src="img/portadanosotros.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+				  <h2><b>Quiénes Somos</b></h2>
+				  <p class="parrafo">Una empresa dedicada al cultivo de los Huevos Azules, una variedad de huevo única en sabor.</p>
+				  <p class="parrafo"><a class="btn btn-default" data-toggle="tab" href="#nosotros" role="button">Conózcanos »</a></p>
+				</div>
+				<div class="col-md-4">
+				  <img class="img-circle" src="img/portadacontacto.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+				  <h2><b>Contacto</b></h2>
+				  <p class="parrafo">Póngase en contacto con nosotros y le despachamos nuestro producto donde lo necesite.</p>
+				  <p class="parrafo"><a class="btn btn-default" data-toggle="tab" href="#contacto" role="button">Contáctenos »</a></p>
+				</div>
+<!-- 				<div class="col-md-4">
+				  <img class="img-circle" src="img/portadaclientes.jpg" alt="Generic placeholder image" style="width: 140px; height: 140px;">
+				  <h2><b>Clientes</b></h2>
+				  <p class="parrafo">Sea parte de nuestra cartera de clientes que ya disfrutan nuestro producto.</p>
+				  <p class="parrafo"><a class="btn btn-default" data-toggle="tab" href="#clientes" role="button">Ver detalles »</a></p>
+				</div> -->
 			</div>
-			</div>
-			<div role="tabpanel" class="tab-pane" id="nosotros" style="line-height:40px;">
-			<div class="container">
+		</div>
+	  </div>
+	  <div role="tabpanel" class="tab-pane" id="nosotros" style="line-height:40px;">
+		<div class="container">
+			<div class="page-header">
 				<h2 class="titulo">Nosotros</h2>
-				<div class="row">
-				<div class="col-md-6 col-md-offset-3"><img src="img/logogrande.jpg" /></div>
-				</div>
-				<div class="row">
-				<div class="col-md-8 parrafo text-justify">
-				<p>&nbsp;</p>
-				<p>Somos una organización de productores de huevos de gallinas mapuches, líder en la comercialización y distribución de los exóticos huevos azules. Ubicados en la ciudad de Temuco, nos especializamos en el cuidado de esta especie única del sur de hile, que es el origen del huevo azul o azul verdoso.</p>
-				<p>Nuestro sistema de producción es artesanal, ya que utilizamos un mínimo de tecnología y valorizamos el conocimiento campesino e indígena.</p>
-				</div>
-				<div class="col-md-4"><p>&nbsp;</p><img class="img-responsive" alt="Responsive image" src="http://gallinasmaravilla.com/wp-content/uploads/2013/02/gallinas_maravilla_04.jpg"></div>
-				</div>
-				<div class="row">
-				<div class="col-md-4"><img class="img-responsive" alt="Responsive image" src="http://bashny.net/uploads/images/00/00/13/2013/05/01/8702363b7d.jpg"></div>
-				<div class="col-md-8 parrafo text-justify">
-				<p>Nuestra visión es llegar a todas las mesas de aquellos que prefieran productos de alimentación de tipo tecnológico, patrimonial y artesanal de gran calidad como lo es el huevo azul. Además, nuestra meta es ser parte de circuitos gastronómicos, restaurantes y gourmetm de forma de dar a conocer a más personas este verdadero baluarte de la cocina chilena.</p></div>
-				</div>
-				<div class="col-md-12">&nbsp;</div>
 			</div>
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-3 col-xs-12"><img src="img/logogrande.jpg" class="img-responsive img-movil" /></div>
 			</div>
-			<div role="tabpanel" class="tab-pane" id="productos">
-			<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-dialog">
-					<div class="modal-content">         
-					<div class="modal-body">                
-					</div>
-					</div><!-- /.modal-content -->
-				</div><!-- /.modal-dialog -->
-			</div><!-- /.modal -->
-			<div class="container">
-				<h2 class="titulo">Productos</h2>
-				<div class="row">
+			<div class="row">
+				<div class="col-md-8 col-sm-8 col-xs-12 parrafo text-justify">
+					<p>&nbsp;</p>
+					<p>Somos una organización de productores de huevos de gallinas mapuches, líder en la comercialización y distribución de los exóticos huevos azules. Ubicados en la ciudad de Temuco, nos especializamos en el cuidado de esta especie única del sur de hile, que es el origen del huevo azul o azul verdoso.</p>
+					<p class="hidden-sm">Nuestro sistema de producción es artesanal, ya que utilizamos un mínimo de tecnología y valorizamos el conocimiento campesino e indígena.</p>
+				</div>
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<p>&nbsp;</p><img class="img-responsive img-rounded img-movil" alt="Responsive image" src="http://3.bp.blogspot.com/-ZC4szbiO1YI/TZHUtpCxqaI/AAAAAAAAAQs/QemXL1pSAuQ/s640/POLLOS%2B%25282%2529.jpg">
+				</div>
+				<div class="col-sm-12 visible-sm parrafo text-justify">
+					<p>Nuestro sistema de producción es artesanal, ya que utilizamos un mínimo de tecnología y valorizamos el conocimiento campesino e indígena.</p>
+				</div>
+			</div><br>
+			<div class="row">
+				<div class="col-md-4 col-sm-4 col-xs-12">
+					<img class="img-responsive img-rounded img-movil" alt="Responsive image" src="http://bashny.net/uploads/images/00/00/13/2013/05/01/8702363b7d.jpg">
+				</div>
+				<p class="visible-xs">&nbsp;</p>
+				<div class="col-md-8 col-sm-8 col-xs-12 parrafo text-justify">
+					<p>Nuestra visión es llegar a todas las mesas de aquellos que prefieran productos de alimentación de tipo tecnológico, patrimonial y artesanal de gran calidad como lo es el huevo azul.</p>
+				</div>
+				<div class="col-md-8 col-sm-12 col-xs-12 parrafo text-justify">
+					<p>Además, nuestra meta es ser parte de circuitos gastronómicos, restaurantes y gourmetm de forma de dar a conocer a más personas este verdadero baluarte de la cocina chilena.</p>
+				</div>
+			</div>
+			<div class="col-md-12">&nbsp;</div>
+		</div>
+	  </div>
+	  <div role="tabpanel" class="tab-pane" id="productos">
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				<div class="modal-body">
+				</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div class="container">
+			<div class="page-header">
+				<h2 class="titulo">Servicios</h2>
+			</div>
+			<div class="row">
 				<div class="col-md-10 col-md-offset-1 parrafo text-justify">
-				<p>Nuestro producto corresponde a huevos de color azul o azul verdoso que actualmente se comercializan en la Región de la Araucanía y del Bío Bío, pero que estamos empezando su expansión a través de envíos del producto a todo Chile.</p>
-				</div></div>
-				<div class="row">
-				<div class="col-md-10 col-md-offset-1 parrafo text-justify">
-				<p>La gallina mapuche o araucana es un tipo de ave criada por los mapuches, pueblo indígena de chile. Existen dos variedades de gallinas mapuches: Collonca y Quetro. Ambas ponen huevos de color azul o azul verdoso.</p>
-				</div></div>
-				<div class="col-md-12 galeria">
-				<ul class="row">
-					<li class="col-lg-3 thumbnail"><img class="img-responsive" src="http://hifasdelmonte.files.wordpress.com/2010/09/dsc02755.jpg"/></li>
-					<li class="col-lg-3 thumbnail"><img class="img-responsive" src="http://bimg2.mlstatic.com/huevos-verdes-y-azules-fertiles-para-incubar_MLC-F-39053637_6630.jpg"/></li>
-					<li class="col-lg-3 thumbnail"><img class="img-responsive" src="http://www.sernatur.cl/wp-content/uploads/2012/02/Paila-de-huevo-en-R%C3%ADo-Negro.jpg"/></li>
-					<li class="col-lg-3 thumbnail"><img class="img-responsive" src="http://www.gallinaaraucana.es/wp-content/uploads/2012/10/AraucanaWithLeghorn.jpg"/></li>
-				</ul>
-				<ul class="row">
-					<li class="col-lg-3 thumbnail"><img class="img-responsive" src="http://1.bp.blogspot.com/-ZC9_EnOWG_Q/UNOMuaFqFTI/AAAAAAAAKbg/Xy4FWaTjyy4/s1600/DSCN6208.JPG"/></li>
-					<li class="col-lg-3 thumbnail"><img class="img-responsive" src="http://photos1.blogger.com/blogger/4177/3607/1600/Villarrica.jpg"/></li>
-					<li class="col-lg-3 thumbnail"><img class="img-responsive" src="http://2.bp.blogspot.com/-n7HG87YW4pc/UyOdRBBnBRI/AAAAAAAAGUU/IQG5mkuotzc/s1600/Huevo-Relleno-Aguacate.jpg"/></li>
-					<li class="col-lg-3 thumbnail"><img class="img-responsive" src="http://www.estefaniamendivil.com/site/wp-content/uploads/2014/04/la-foto-25.jpg"/></li>
-				</ul>
+					<p>Nuestra empresa ofrece la venta por mayor de Huevos Azules, el cuál corresponde a huevos de color azul o azul verdoso que actualmente se comercializan en la Región de la Araucanía y del Bío Bío, pero que estamos empezando su expansión a través de envíos del producto a todo Chile.</p>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 parrafo text-justify">
+					<p>La gallina mapuche o araucana es un tipo de ave criada por los mapuches, pueblo indígena de chile. Existen dos variedades de gallinas mapuches: Collonca y Quetro. Ambas ponen huevos de color azul o azul verdoso.</p>
+				</div>
 			</div>
-			<div role="tabpanel" class="tab-pane" id="clientes">
-			<div class="container">
-				<h2 class="titulo">Clientes</h2>
-				<div class="row">
+			<div class="row galeria">
+					<div class="col-md-4 col-sm-4"><img class="img-responsive img-thumbnail" src="http://hifasdelmonte.files.wordpress.com/2010/09/dsc02755.jpg"/></div>
+					<div class="col-md-4 col-sm-4"><img class="img-responsive img-thumbnail" src="http://bimg2.mlstatic.com/huevos-verdes-y-azules-fertiles-para-incubar_MLC-F-39053637_6630.jpg"/></div>
+					<div class="col-md-4 col-sm-4"><img class="img-responsive img-thumbnail" src="http://1.bp.blogspot.com/-ZC9_EnOWG_Q/UNOMuaFqFTI/AAAAAAAAKbg/Xy4FWaTjyy4/s1600/DSCN6208.JPG"/></div>
+			</div>
+			<div class="row galeria">
+					<div class="col-md-4 col-sm-4"><img class="img-responsive img-thumbnail" src="http://2.bp.blogspot.com/-n7HG87YW4pc/UyOdRBBnBRI/AAAAAAAAGUU/IQG5mkuotzc/s1600/Huevo-Relleno-Aguacate.jpg"/></div>
+					<div class="col-md-4 col-sm-4"><img class="img-responsive img-thumbnail" src="http://www.estefaniamendivil.com/site/wp-content/uploads/2014/04/la-foto-25.jpg"/></div>
+					<div class="col-md-4 col-sm-4"><img class="img-responsive img-thumbnail" src="http://img.soy-chile.cl/Fotos/2013/02/01/file_20130201193713.jpg"/></div>
+			</div>
+		</div>
+	  </div>
+<!-- 	  <div role="tabpanel" class="tab-pane" id="clientes">
+		<div class="container">
+			<h2 class="titulo">Clientes</h2>
+			<div class="row">
 				<div class="col-md-10 col-md-offset-1 parrafo text-center">
-				<p><b>Estos clientes han confiado en nosotros.</b></p>
-				</div></div>
-				<div class="row">
-				<div class="col-md-10 col-md-offset-1 parrafo text-justify">
-				<p>Para ser parte de ellos, sólo contáctanos a través de nuestra sección <a style="font-size: 20px;vertical-align: bottom;" data-toggle="tab" class="btn btn-default"  href="#contacto" role="button">Contacto</a> y disfrute de estos exclusivos huevos que adornarán y diversificarán sus futuros platos.</p>
-				<p>&nbsp;</p>
-				</div></div>
-				<div class="row">
-				<div class="col-md-4 col-md-offset-4"><img class="img-responsive" alt="Responsive image" src="http://media-cdn.tripadvisor.com/media/photo-s/03/75/0c/ab/madero-lounge.jpg"></div>
+					<p><b>Estos clientes han confiado en nosotros.</b></p>
 				</div>
-				<div class="row">
+			</div>
+			<div class="row">
 				<div class="col-md-10 col-md-offset-1 parrafo text-justify">
-				<p>&nbsp;</p>
-				<p>El Restaurant <b>Madero Lounge</b> fue el primero en abrir las puertas al convivia Frontera del Sur, en este acogedor ambiente con toques Slow en sus paredes y reflexiones. Realizan cata de huevos azules preparado en mousse y con crème brûlée.</p>
-				<p>&nbsp;</p>
-				</div></div>
-				<div class="row">
-				<div class="col-md-4 col-md-offset-4"><img class="img-responsive" alt="Responsive image" src="http://slowfoodmexicoycentroamerica.org/wp-content/uploads/2014/04/slowfood.png"></div>
+					<p>Para ser parte de ellos, sólo contáctanos a través de nuestra sección <a style="font-size: 20px;vertical-align: bottom;" data-toggle="tab" class="btn btn-default"  href="#contacto" role="button">Contacto</a> y disfrute de estos exclusivos huevos que adornarán y diversificarán sus futuros platos.</p>
+					<p>&nbsp;</p>
 				</div>
-				<div class="row">
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<img class="img-responsive" alt="Responsive image" src="http://media-cdn.tripadvisor.com/media/photo-s/03/75/0c/ab/madero-lounge.jpg">
+				</div>
+			</div>
+			<div class="row">
 				<div class="col-md-10 col-md-offset-1 parrafo text-justify">
-				<p>&nbsp;</p>
-				<p>El movimiento internacional <b>Slow Food</b> considera el huevo azul como baluarte, que muestra una característica única en la producción aviar mundial, desde tiempos precolombinos asociada a la cultura mapuche.</p>
-				</div></div>
+					<p>&nbsp;</p>
+					<p>El Restaurant <b>Madero Lounge</b> fue el primero en abrir las puertas al convivia Frontera del Sur, en este acogedor ambiente con toques Slow en sus paredes y reflexiones. Realizan cata de huevos azules preparado en mousse y con crème brûlée.</p>
+					<p>&nbsp;</p>
+				</div>
 			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<img class="img-responsive" alt="Responsive image" src="http://slowfoodmexicoycentroamerica.org/wp-content/uploads/2014/04/slowfood.png">
+				</div>
 			</div>
-			<div role="tabpanel" class="tab-pane" id="contacto">
-			<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 parrafo text-justify">
+					<p>&nbsp;</p>
+					<p>El movimiento internacional <b>Slow Food</b> considera el huevo azul como baluarte, que muestra una característica única en la producción aviar mundial, desde tiempos precolombinos asociada a la cultura mapuche.</p>
+				</div>
+			</div>
+		</div>
+	  </div> -->
+	  <div role="tabpanel" class="tab-pane" id="contacto">
+		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModal2Label">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="alert alert-success" style="margin-bottom:0">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<p>Su mensaje ha sido envíado.</p>
+			  </div>
+			</div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		<div class="container">
+			<div class="page-header">
 				<h2 class="titulo">Contacto</h2>
-				<div class="row">
+			</div>
+			<div class="row">
 				<div class="col-md-10 col-md-offset-1 parrafo">
-				Si quieres alguno de nuestros productos, o tienes alguna duda sobre ellos, puedes contactarte con nosotros enviándonos el siguiente formulario.
+					Si quieres alguno de nuestros productos, o tienes alguna duda sobre ellos, puedes contactarte con nosotros enviándonos el siguiente formulario.
 				</div>
 				<div class="col-md-12">&nbsp;</div>
-				<div class="col-md-6 col-md-offset-3 parrafo" style="font-size:18px;">
-				<p><i>Rellene el formulario con su Facebook:</i>&nbsp;&nbsp;&nbsp;<button onclick="ingresar();"><img src="img/botonfb.png"></button></p> 
-				</div>
-				<div class="col-md-12 parrafo">
-				<form name="register" role="form">
-					<div class="form-group">
-					<label for="nombre">Nombre</label>
-					<input type="text" class="form-control" id="nombre" placeholder="Escriba su nombre" value="" required="Complete este campo"></input>
-					</div>
-					<div class="form-group">
-				    <label for="mail">Correo electrónico</label>
-					<input type="email" class="form-control" id="mail" placeholder="Escriba su correo electrónico" value="" required="Complete este campo"></input>
-					</div>
-					<div class="form-group">
-					<label for="nombre">Fono</label>
-					<input type="number" class="form-control" id="fono" placeholder="Escriba su teléfono" required="Complete este campo"></input>
-					</div>
-					<div class="form-group">
-					<label for="nombre">Mensaje</label>
-					<textarea type="text" class="form-control" id="mensaje" placeholder="Escriba su mensaje aquí" required="Complete este campo"></textarea>
-					</div>
- 				 <button type="submit" class="btn btn-default parrafo">Enviar formulario</button>
-				</form>
-				<div id="formAlert" class="alert alert-sucess hide">  
-				<a class="close">×</a>  
-				<strong>¡Ha enviado su mensaje con éxito!</strong> Lo responderemos a la brevedad. Gracias por contactarnos.
+				<div class="col-md-8 col-md-offset-2 parrafo text-center" style="font-size:18px;">
+				<div class="panel panel-default">
+				  <div class="panel-body">
+					<p><i>Rellene el formulario con su Facebook:</i>&nbsp;&nbsp;&nbsp;<img src="img/botonfb.png" class="img-responsive btn btn-default" style="padding:0" onclick="ingresar();"></p> 
+				  </div>
 				</div>
 				</div>
-				<div class="col-md-4 col-md-offset-4"><h3 class="titulo text-center">Ubicación</h3></div>
+				<div class="col-md-12">
+				  <div class="well">
+					<form name="register" role="form" class="form-horizontal" id="idForm">
+						<div class="form-group">
+							<label for="nombre" class="col-sm-2 control-label">Nombre</label>
+							<div class="col-md-10">
+								<input type="text" name="nombre" class="form-control" id="nombre" placeholder="Escriba su nombre" value="" required="Complete este campo" data-validation="length required" data-validation-length="min3" data-validation-error-msg="El nombre debe al menos 3 caracteres"></input>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="mail" class="col-sm-2 control-label">Correo electrónico</label>
+							<div class="col-md-10">
+								<input type="email" name="mail" class="form-control" id="mail" placeholder="Escriba su correo electrónico" value="" required="Complete este campo"  data-validation="required email"></input>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="fono" class="col-sm-2 control-label">Fono</label>
+							<div class="col-md-10">
+								<input type="text" name="fono" class="form-control" id="fono" placeholder="Escriba su teléfono" required="Complete este campo" data-validation="required length alphanumeric" data-validation-length="6-12" data-validation-error-msg="El teléfono debe tener entre 6 a 12 caracteres"></input>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="asunto" class="col-sm-2 control-label">Asunto</label>
+							<div class="col-md-10">
+								<input type="text" name="asunto" class="form-control" id="asunto" placeholder="Escriba el asunto del mensaje" value="" required="Complete este campo" data-validation="length required" data-validation-length="min3" data-validation-error-msg="El asunto debe tener al menos 3 caracteres"></input>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="mensaje" class="col-sm-2 control-label">Mensaje</label>
+							<div class="col-md-10">
+								<textarea type="text" name="mensaje" class="form-control" id="mensaje" placeholder="Escriba su mensaje aquí" data-validation="required" required="Complete este campo"></textarea>
+							</div>
+						</div>
+						<div class="form-group">
+							<button type="submit" class="btn btn-default col-md-2 col-md-offset-5">Enviar formulario</button>
+						</div>
+					</form>
+					<div id="formAlert" class="alert alert-sucess hide">  
+						<a class="close">×</a>  
+						<strong>¡Ha enviado su mensaje con éxito!</strong> Lo responderemos a la brevedad. Gracias por contactarnos.
+					</div>
+				</div>
+				<div class="col-md-4 col-md-offset-4">
+					<h3 class="titulo text-center">Ubicación</h3>
+				</div>
 				<div class="col-md-10 col-md-offset-1 parrafo">
-				Nos pueden encontrar también directamente en nuestras oficinas ubicadas en Avenida Alemania 7739, en la ciudad de Temuco, Chile.
+					Nos pueden encontrar también directamente en nuestras oficinas ubicadas en Avenida Alemania 7739, en la ciudad de Temuco, Chile.
 				</div>
 				<div class="col-md-12" id="gmap">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3112.2944079134104!2d-72.6134471!3d-38.7340058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3f5dbba0d4b%3A0xd83e0e73ecb973b5!2sAlemania%2C+Temuco%2C+Araucan%C3%ADa%2C+Chile!5e0!3m2!1ses!2scl!4v1416784040647" width="1000" height="400" frameborder="0" style="border:0"></iframe>
-				<div class="col-md-12">&nbsp;</div>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3112.2944079134104!2d-72.6134471!3d-38.7340058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9614d3f5dbba0d4b%3A0xd83e0e73ecb973b5!2sAlemania%2C+Temuco%2C+Araucan%C3%ADa%2C+Chile!5e0!3m2!1ses!2scl!4v1416784040647" width="1000" height="400" frameborder="0" style="border:0"></iframe>
+					<div class="col-md-12">&nbsp;</div>
 				</div>
-			</div>
-			</div>
+			  </div>
 			</div>
 		</div>
+	  </div>
+	</div>
 	<div style="background-color:#487F98;">
-		<div class="container" style="background-color:#487F98;"><footer>
-			<p style="padding-top:10px;text-align:center;"><b>Asociación de Productores de Huevos Azules Ltda. /</b> Avda. Alemania 7739, Temuco, Chile</p>
-		</footer></div>
+		<div class="container" style="background-color:#487F98;">
+			<footer>
+				<p style="padding-top:10px;text-align:center;"><b>Asociación de Productores de Huevos Azules Ltda. /</b> Avda. Alemania 7739, Temuco, Chile</p>
+			</footer>
+		</div>
 	</div>
 	<script>
 	$(document).ready(function(){
-           $('li img').on('click',function(){
+		$("#idForm").submit(function(e) {
+		$.ajax({
+		  type: "POST",
+		  url: "https://mandrillapp.com/api/1.0/messages/send.json",
+		  data: {
+			'key': 'sB-48USMdD95A03Fnnc_rA',
+			'message': {
+			  'from_email': $('#mail').val(),
+			  'to': [
+				  {
+					'email': 'alfonsogame@hotmail.com',
+					'name': 'Victor Cruz',
+					'type': 'to'
+				  }
+				],
+			  'autotext': 'true',
+			  'subject': $('#asunto').val(),
+			  'html': '<b>Nombre del contacto: </b>'+$('#nombre').val()+'<br><b>Correo electrónico: </b>'+$('#mail').val()+'<br><b>Teléfono de contacto: </b>'+$('#fono').val()+'<br><br>'+$('#mensaje').val()
+			}
+		  }
+		 }).done(function(response) {
+		   $('#myModal2').modal('show');
+		   setTimeout(function(){$("#myModal1").hide();}, 3000);
+		 });
+		e.preventDefault(); // avoid to execute the actual submit of the form.
+	});
+	});
+	$(document).ready(function(){
+           $('.galeria img').on('click',function(){
                 var src = $(this).attr('src');
                 var img = '<img src="' + src + '" class="img-responsive"/>';
                 $('#myModal').modal();
                 $('#myModal').on('shown.bs.modal', function(){
-                    $('#myModal .modal-body').html(img);
+                    $('#myModal .modal-body').html('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+img);
                 });
                 $('#myModal').on('hidden.bs.modal', function(){
                     $('#myModal .modal-body').html('');
@@ -351,9 +418,7 @@
         }
     });
 	}
-	$(document).on('click', '[type="submit"]', function() {
-    alert('Ya ha enviado su formulario.');
-	});
+	$.validate();
 	</script>
   </body>
 </html>
